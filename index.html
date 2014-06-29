@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nav: <a href="#/">Root</a> <a href="#/test1">Get customers from JSON</a> <a href="#/test2">Get customers from LocalStorage</a></p>
+
+    <!-- placeholder -->
+    <div ng-view></div>
+
+    <!-- their code (thank you) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <script src="scripts/angular-local-storage.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.18/angular-route.min.js"></script>
+
+    <!-- our code -->
+    <script src="app/app.js"></script>
+    <script src="app/factories/customers.js"></script>
+    <script src="app/controllers/customers.js"></script>
+</body>
+</html>

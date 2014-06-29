@@ -1,0 +1,11 @@
+<h1>View 1 (test1)</h1>
+<p>Gets customers from api/customers.json. Orders by city.</p>
+
+<div class="container">
+    <p>Filter: <input type="text" ng-model="filterlist"></p>
+    <ul>
+        <li ng-repeat="customer in customersJson | filter: filterlist | orderBy: 'city'">
+            {{ customer.name | uppercase }} - {{ customer.city }}
+        </li>
+    </ul>
+</div>

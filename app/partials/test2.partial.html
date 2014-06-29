@@ -1,0 +1,16 @@
+<h1>View 2 (test2)</h1>
+<p>Gets customers from local storage. Orders by city.</p>
+
+<div class="container">
+    <p>Filter: <input type="text" ng-model="filterlist"></p>
+    <ul>
+        <li ng-repeat="customer in customersLS | filter: filterlist | orderBy: 'city'">
+            {{ customer.name | uppercase }} - {{ customer.city }} <button ng-click="removeCustomerFromLS(customer.name)">x</button>
+        </li>
+    </ul>
+
+    <h2>Add customers to LocalStorage</h2>
+    <p>Name: <input type="text" ng-model="newCustomer.name"></p>
+    <p>City: <input type="text" ng-model="newCustomer.city"></p>
+    <p><button ng-click="addCustomerToLS()">Add customer</button></p>
+</div>
