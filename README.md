@@ -1,0 +1,1 @@
+A fiddle with AngularJS. Based off some reference on YouTube. Extended with $http functionality and LocalStorage for persisting data.
